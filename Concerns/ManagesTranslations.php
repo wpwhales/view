@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace WPWhales\View\Concerns;
 
 trait ManagesTranslations
 {

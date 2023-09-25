@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace WPWhales\View\Compilers\Concerns;
 
 trait CompilesJson
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
-use Illuminate\Contracts\Support\Htmlable;
+use WPWhales\Contracts\Support\Htmlable;
 use Stringable;
 
 class ComponentSlot implements Htmlable, Stringable
@@ -10,7 +10,7 @@ class ComponentSlot implements Htmlable, Stringable
     /**
      * The slot attribute bag.
      *
-     * @var \Illuminate\View\ComponentAttributeBag
+     * @var \WPWhales\View\ComponentAttributeBag
      */
     public $attributes;
 

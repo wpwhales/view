@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace WPWhales\View\Compilers\Concerns;
 
-use Illuminate\Contracts\View\ViewCompilationException;
+use WPWhales\Contracts\View\ViewCompilationException;
 
 trait CompilesLoops
 {
@@ -19,7 +19,7 @@ trait CompilesLoops
      * @param  string  $expression
      * @return string
      *
-     * @throws \Illuminate\Contracts\View\ViewCompilationException
+     * @throws \WPWhales\Contracts\View\ViewCompilationException
      */
     protected function compileForelse($expression)
     {
@@ -96,7 +96,7 @@ trait CompilesLoops
      * @param  string  $expression
      * @return string
      *
-     * @throws \Illuminate\Contracts\View\ViewCompilationException
+     * @throws \WPWhales\Contracts\View\ViewCompilationException
      */
     protected function compileForeach($expression)
     {

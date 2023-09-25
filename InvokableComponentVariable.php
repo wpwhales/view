@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
 use ArrayIterator;
 use Closure;
-use Illuminate\Contracts\Support\DeferringDisplayableValue;
-use Illuminate\Support\Enumerable;
+use WPWhales\Contracts\Support\DeferringDisplayableValue;
+use WPWhales\Support\Enumerable;
 use IteratorAggregate;
 use Stringable;
 use Traversable;
@@ -33,7 +33,7 @@ class InvokableComponentVariable implements DeferringDisplayableValue, IteratorA
     /**
      * Resolve the displayable value that the class is deferring.
      *
-     * @return \Illuminate\Contracts\Support\Htmlable|string
+     * @return \WPWhales\Contracts\Support\Htmlable|string
      */
     public function resolveDisplayableValue()
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
 use ErrorException;
-use Illuminate\Container\Container;
-use Illuminate\Support\Reflector;
+use WPWhales\Container\Container;
+use WPWhales\Support\Reflector;
 
 class ViewException extends ErrorException
 {
@@ -27,8 +27,8 @@ class ViewException extends ErrorException
     /**
      * Render the exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response|null
+     * @param  \WPWhales\Http\Request  $request
+     * @return \WPWhales\Http\Response|null
      */
     public function render($request)
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\View\Compilers;
+namespace WPWhales\View\Compilers;
 
 use ErrorException;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Str;
+use WPWhales\Filesystem\Filesystem;
+use WPWhales\Support\Str;
 use InvalidArgumentException;
 
 abstract class Compiler
@@ -12,7 +12,7 @@ abstract class Compiler
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \WPWhales\Filesystem\Filesystem
      */
     protected $files;
 
@@ -47,7 +47,7 @@ abstract class Compiler
     /**
      * Create a new compiler instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \WPWhales\Filesystem\Filesystem  $files
      * @param  string  $cachePath
      * @param  string  $basePath
      * @param  bool  $shouldCache

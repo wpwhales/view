@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\View\Compilers;
+namespace WPWhales\View\Compilers;
 
-use Illuminate\Container\Container;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\View\Factory as ViewFactory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\ReflectsClosures;
-use Illuminate\View\Component;
+use WPWhales\Container\Container;
+use WPWhales\Contracts\Support\Htmlable;
+use WPWhales\Contracts\View\Factory as ViewFactory;
+use WPWhales\Contracts\View\View;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Str;
+use WPWhales\Support\Traits\ReflectsClosures;
+use WPWhales\View\Component;
 use InvalidArgumentException;
 
 class BladeCompiler extends Compiler implements CompilerInterface
@@ -214,7 +214,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
      * Get the open and closing PHP tag tokens from the given string.
      *
      * @param  string  $contents
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     protected function getOpenAndClosingPhpTokens($contents)
     {
@@ -340,7 +340,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
     /**
      * Render a component instance to HTML.
      *
-     * @param  \Illuminate\View\Component  $component
+     * @param  \WPWhales\View\Component  $component
      * @return string
      */
     public static function renderComponent(Component $component)
@@ -709,20 +709,20 @@ class BladeCompiler extends Compiler implements CompilerInterface
 
         $this->directive($name, function ($expression) use ($name) {
             return $expression !== ''
-                    ? "<?php if (\Illuminate\Support\Facades\Blade::check('{$name}', {$expression})): ?>"
-                    : "<?php if (\Illuminate\Support\Facades\Blade::check('{$name}')): ?>";
+                    ? "<?php if (\WPWhales\Support\Facades\Blade::check('{$name}', {$expression})): ?>"
+                    : "<?php if (\WPWhales\Support\Facades\Blade::check('{$name}')): ?>";
         });
 
         $this->directive('unless'.$name, function ($expression) use ($name) {
             return $expression !== ''
-                ? "<?php if (! \Illuminate\Support\Facades\Blade::check('{$name}', {$expression})): ?>"
-                : "<?php if (! \Illuminate\Support\Facades\Blade::check('{$name}')): ?>";
+                ? "<?php if (! \WPWhales\Support\Facades\Blade::check('{$name}', {$expression})): ?>"
+                : "<?php if (! \WPWhales\Support\Facades\Blade::check('{$name}')): ?>";
         });
 
         $this->directive('else'.$name, function ($expression) use ($name) {
             return $expression !== ''
-                ? "<?php elseif (\Illuminate\Support\Facades\Blade::check('{$name}', {$expression})): ?>"
-                : "<?php elseif (\Illuminate\Support\Facades\Blade::check('{$name}')): ?>";
+                ? "<?php elseif (\WPWhales\Support\Facades\Blade::check('{$name}', {$expression})): ?>"
+                : "<?php elseif (\WPWhales\Support\Facades\Blade::check('{$name}')): ?>";
         });
 
         $this->directive('end'.$name, function () {
@@ -928,7 +928,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
         $this->directive($alias, function ($expression) use ($path) {
             $expression = $this->stripParentheses($expression) ?: '[]';
 
-            return "<?php echo \$__env->make('{$path}', {$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
+            return "<?php echo \$__env->make('{$path}', {$expression}, \WPWhales\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
     }
 

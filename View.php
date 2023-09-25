@@ -1,19 +1,19 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
 use ArrayAccess;
 use BadMethodCallException;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\Support\MessageProvider;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Contracts\View\Engine;
-use Illuminate\Contracts\View\View as ViewContract;
-use Illuminate\Support\MessageBag;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Support\ViewErrorBag;
+use WPWhales\Contracts\Support\Arrayable;
+use WPWhales\Contracts\Support\Htmlable;
+use WPWhales\Contracts\Support\MessageProvider;
+use WPWhales\Contracts\Support\Renderable;
+use WPWhales\Contracts\View\Engine;
+use WPWhales\Contracts\View\View as ViewContract;
+use WPWhales\Support\MessageBag;
+use WPWhales\Support\Str;
+use WPWhales\Support\Traits\Macroable;
+use WPWhales\Support\ViewErrorBag;
 use Stringable;
 use Throwable;
 
@@ -26,14 +26,14 @@ class View implements ArrayAccess, Htmlable, Stringable, ViewContract
     /**
      * The view factory instance.
      *
-     * @var \Illuminate\View\Factory
+     * @var \WPWhales\View\Factory
      */
     protected $factory;
 
     /**
      * The engine implementation.
      *
-     * @var \Illuminate\Contracts\View\Engine
+     * @var \WPWhales\Contracts\View\Engine
      */
     protected $engine;
 
@@ -61,8 +61,8 @@ class View implements ArrayAccess, Htmlable, Stringable, ViewContract
     /**
      * Create a new view instance.
      *
-     * @param  \Illuminate\View\Factory  $factory
-     * @param  \Illuminate\Contracts\View\Engine  $engine
+     * @param  \WPWhales\View\Factory  $factory
+     * @param  \WPWhales\Contracts\View\Engine  $engine
      * @param  string  $view
      * @param  string  $path
      * @param  mixed  $data
@@ -262,7 +262,7 @@ class View implements ArrayAccess, Htmlable, Stringable, ViewContract
     /**
      * Add validation errors to the view.
      *
-     * @param  \Illuminate\Contracts\Support\MessageProvider|array  $provider
+     * @param  \WPWhales\Contracts\Support\MessageProvider|array  $provider
      * @param  string  $bag
      * @return $this
      */
@@ -276,8 +276,8 @@ class View implements ArrayAccess, Htmlable, Stringable, ViewContract
     /**
      * Parse the given errors into an appropriate value.
      *
-     * @param  \Illuminate\Contracts\Support\MessageProvider|array|string  $provider
-     * @return \Illuminate\Support\MessageBag
+     * @param  \WPWhales\Contracts\Support\MessageProvider|array|string  $provider
+     * @return \WPWhales\Support\MessageBag
      */
     protected function formatErrors($provider)
     {
@@ -340,7 +340,7 @@ class View implements ArrayAccess, Htmlable, Stringable, ViewContract
     /**
      * Get the view factory instance.
      *
-     * @return \Illuminate\View\Factory
+     * @return \WPWhales\View\Factory
      */
     public function getFactory()
     {
@@ -350,7 +350,7 @@ class View implements ArrayAccess, Htmlable, Stringable, ViewContract
     /**
      * Get the view's rendering engine.
      *
-     * @return \Illuminate\Contracts\View\Engine
+     * @return \WPWhales\Contracts\View\Engine
      */
     public function getEngine()
     {
@@ -452,7 +452,7 @@ class View implements ArrayAccess, Htmlable, Stringable, ViewContract
      *
      * @param  string  $method
      * @param  array  $parameters
-     * @return \Illuminate\View\View
+     * @return \WPWhales\View\View
      *
      * @throws \BadMethodCallException
      */

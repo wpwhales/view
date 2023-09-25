@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
 class AnonymousComponent extends Component
 {

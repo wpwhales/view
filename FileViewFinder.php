@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
-use Illuminate\Filesystem\Filesystem;
+use WPWhales\Filesystem\Filesystem;
 use InvalidArgumentException;
 
 class FileViewFinder implements ViewFinderInterface
@@ -10,7 +10,7 @@ class FileViewFinder implements ViewFinderInterface
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \WPWhales\Filesystem\Filesystem
      */
     protected $files;
 
@@ -45,7 +45,7 @@ class FileViewFinder implements ViewFinderInterface
     /**
      * Create a new file view loader instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \WPWhales\Filesystem\Filesystem  $files
      * @param  array  $paths
      * @param  array|null  $extensions
      * @return void
@@ -268,7 +268,7 @@ class FileViewFinder implements ViewFinderInterface
     /**
      * Get the filesystem instance.
      *
-     * @return \Illuminate\Filesystem\Filesystem
+     * @return \WPWhales\Filesystem\Filesystem
      */
     public function getFilesystem()
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace WPWhales\View\Concerns;
 
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Str;
+use WPWhales\Contracts\View\View;
+use WPWhales\Support\Str;
 use InvalidArgumentException;
 
 trait ManagesLayouts

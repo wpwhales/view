@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace WPWhales\View\Concerns;
 
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Arr;
-use Illuminate\View\ComponentSlot;
+use WPWhales\Contracts\Support\Htmlable;
+use WPWhales\Contracts\View\View;
+use WPWhales\Support\Arr;
+use WPWhales\View\ComponentSlot;
 
 trait ManagesComponents
 {
@@ -47,7 +47,7 @@ trait ManagesComponents
     /**
      * Start a component rendering process.
      *
-     * @param  \Illuminate\Contracts\View\View|\Illuminate\Contracts\Support\Htmlable|\Closure|string  $view
+     * @param  \WPWhales\Contracts\View\View|\WPWhales\Contracts\Support\Htmlable|\Closure|string  $view
      * @param  array  $data
      * @return void
      */

@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\View\Engines;
+namespace WPWhales\View\Engines;
 
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Http\Exceptions\HttpResponseException;
-use Illuminate\View\Compilers\CompilerInterface;
-use Illuminate\View\ViewException;
+use WPWhales\Filesystem\Filesystem;
+use WPWhales\Http\Exceptions\HttpResponseException;
+use WPWhales\View\Compilers\CompilerInterface;
+use WPWhales\View\ViewException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
 
@@ -14,7 +14,7 @@ class CompilerEngine extends PhpEngine
     /**
      * The Blade compiler instance.
      *
-     * @var \Illuminate\View\Compilers\CompilerInterface
+     * @var \WPWhales\View\Compilers\CompilerInterface
      */
     protected $compiler;
 
@@ -35,8 +35,8 @@ class CompilerEngine extends PhpEngine
     /**
      * Create a new compiler engine instance.
      *
-     * @param  \Illuminate\View\Compilers\CompilerInterface  $compiler
-     * @param  \Illuminate\Filesystem\Filesystem|null  $files
+     * @param  \WPWhales\View\Compilers\CompilerInterface  $compiler
+     * @param  \WPWhales\Filesystem\Filesystem|null  $files
      * @return void
      */
     public function __construct(CompilerInterface $compiler, Filesystem $files = null)
@@ -125,7 +125,7 @@ class CompilerEngine extends PhpEngine
     /**
      * Get the compiler implementation.
      *
-     * @return \Illuminate\View\Compilers\CompilerInterface
+     * @return \WPWhales\View\Compilers\CompilerInterface
      */
     public function getCompiler()
     {

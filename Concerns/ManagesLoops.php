@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\View\Concerns;
+namespace WPWhales\View\Concerns;
 
-use Illuminate\Support\Arr;
-use Illuminate\Support\LazyCollection;
+use WPWhales\Support\Arr;
+use WPWhales\Support\LazyCollection;
 
 trait ManagesLoops
 {

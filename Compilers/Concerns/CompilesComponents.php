@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace WPWhales\View\Compilers\Concerns;
 
-use Illuminate\Contracts\Support\CanBeEscapedWhenCastToString;
-use Illuminate\Support\Str;
-use Illuminate\View\ComponentAttributeBag;
+use WPWhales\Contracts\Support\CanBeEscapedWhenCastToString;
+use WPWhales\Support\Str;
+use WPWhales\View\ComponentAttributeBag;
 
 trait CompilesComponents
 {
@@ -64,7 +64,7 @@ trait CompilesComponents
     {
         return implode("\n", [
             '<?php if (isset($component)) { $__componentOriginal'.$hash.' = $component; } ?>',
-            '<?php $component = '.$component.'::resolve('.($data ?: '[]').' + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>',
+            '<?php $component = '.$component.'::resolve('.($data ?: '[]').' + (isset($attributes) && $attributes instanceof WPWhales\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>',
             '<?php $component->withName('.$alias.'); ?>',
             '<?php if ($component->shouldRender()): ?>',
             '<?php $__env->startComponent($component->resolveView(), $component->data()); ?>',
@@ -149,7 +149,7 @@ trait CompilesComponents
      */
     protected function compileProps($expression)
     {
-        return "<?php \$attributes ??= new \\Illuminate\\View\\ComponentAttributeBag; ?>
+        return "<?php \$attributes ??= new \\WPWhales\\View\\ComponentAttributeBag; ?>
 <?php foreach(\$attributes->onlyProps{$expression} as \$__key => \$__value) {
     \$\$__key = \$\$__key ?? \$__value;
 } ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View\Compilers;
+namespace WPWhales\View\Compilers;
 
 interface CompilerInterface
 {

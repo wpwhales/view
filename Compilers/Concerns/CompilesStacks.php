@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\View\Compilers\Concerns;
+namespace WPWhales\View\Compilers\Concerns;
 
-use Illuminate\Support\Str;
+use WPWhales\Support\Str;
 
 trait CompilesStacks
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\View\Compilers\BladeCompiler;
-use Illuminate\View\Engines\CompilerEngine;
-use Illuminate\View\Engines\EngineResolver;
-use Illuminate\View\Engines\FileEngine;
-use Illuminate\View\Engines\PhpEngine;
+use WPWhales\Support\ServiceProvider;
+use WPWhales\View\Compilers\BladeCompiler;
+use WPWhales\View\Engines\CompilerEngine;
+use WPWhales\View\Engines\EngineResolver;
+use WPWhales\View\Engines\FileEngine;
+use WPWhales\View\Engines\PhpEngine;
 
 class ViewServiceProvider extends ServiceProvider
 {
@@ -63,10 +63,10 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Create a new Factory Instance.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
-     * @param  \Illuminate\View\ViewFinderInterface  $finder
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
-     * @return \Illuminate\View\Factory
+     * @param  \WPWhales\View\Engines\EngineResolver  $resolver
+     * @param  \WPWhales\View\ViewFinderInterface  $finder
+     * @param  \WPWhales\Contracts\Events\Dispatcher  $events
+     * @return \WPWhales\View\Factory
      */
     protected function createFactory($resolver, $finder, $events)
     {
@@ -129,7 +129,7 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Register the file engine implementation.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
+     * @param  \WPWhales\View\Engines\EngineResolver  $resolver
      * @return void
      */
     public function registerFileEngine($resolver)
@@ -142,7 +142,7 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Register the PHP engine implementation.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
+     * @param  \WPWhales\View\Engines\EngineResolver  $resolver
      * @return void
      */
     public function registerPhpEngine($resolver)
@@ -155,7 +155,7 @@ class ViewServiceProvider extends ServiceProvider
     /**
      * Register the Blade engine implementation.
      *
-     * @param  \Illuminate\View\Engines\EngineResolver  $resolver
+     * @param  \WPWhales\View\Engines\EngineResolver  $resolver
      * @return void
      */
     public function registerBladeEngine($resolver)

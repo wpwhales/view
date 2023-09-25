@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
 use ArrayAccess;
 use ArrayIterator;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Support\Arr;
-use Illuminate\Support\HtmlString;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Conditionable;
-use Illuminate\Support\Traits\Macroable;
+use WPWhales\Contracts\Support\Htmlable;
+use WPWhales\Support\Arr;
+use WPWhales\Support\HtmlString;
+use WPWhales\Support\Str;
+use WPWhales\Support\Traits\Conditionable;
+use WPWhales\Support\Traits\Macroable;
 use IteratorAggregate;
 use JsonSerializable;
 use Stringable;
@@ -327,7 +327,7 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, JsonSerializable, 
      * Create a new appendable attribute value.
      *
      * @param  mixed  $value
-     * @return \Illuminate\View\AppendableAttributeValue
+     * @return \WPWhales\View\AppendableAttributeValue
      */
     public function prepends($value)
     {
@@ -395,7 +395,7 @@ class ComponentAttributeBag implements ArrayAccess, Htmlable, JsonSerializable, 
      * Merge additional attributes / values into the attribute bag.
      *
      * @param  array  $attributeDefaults
-     * @return \Illuminate\Support\HtmlString
+     * @return \WPWhales\Support\HtmlString
      */
     public function __invoke(array $attributeDefaults = [])
     {

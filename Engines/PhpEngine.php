@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\View\Engines;
+namespace WPWhales\View\Engines;
 
-use Illuminate\Contracts\View\Engine;
-use Illuminate\Filesystem\Filesystem;
+use WPWhales\Contracts\View\Engine;
+use WPWhales\Filesystem\Filesystem;
 use Throwable;
 
 class PhpEngine implements Engine
@@ -11,14 +11,14 @@ class PhpEngine implements Engine
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \WPWhales\Filesystem\Filesystem
      */
     protected $files;
 
     /**
      * Create a new file engine instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \WPWhales\Filesystem\Filesystem  $files
      * @return void
      */
     public function __construct(Filesystem $files)

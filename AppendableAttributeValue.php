@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\View;
+namespace WPWhales\View;
 
 use Stringable;
 
