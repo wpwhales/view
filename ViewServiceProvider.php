@@ -2,6 +2,8 @@
 
 namespace WPWhales\View;
 
+use WPWhales\Events\EventServiceProvider;
+use WPWhales\Filesystem\Filesystem;
 use WPWhales\Support\ServiceProvider;
 use WPWhales\View\Compilers\BladeCompiler;
 use WPWhales\View\Engines\CompilerEngine;
@@ -18,6 +20,10 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->lazyConfigure("view",dirname(__FILE__));
+        $this->registerFilesBindings();
+        $this->registerEventBindings();
+        $this->app->configure("view");
         $this->registerFactory();
         $this->registerViewFinder();
         $this->registerBladeCompiler();
@@ -27,6 +33,33 @@ class ViewServiceProvider extends ServiceProvider
             Component::flushCache();
         });
     }
+
+    /**
+     * Register container bindings for the application.
+     *
+     * @return void
+     */
+    protected function registerFilesBindings()
+    {
+        $this->app->singleton('files', function () {
+            return new Filesystem;
+        });
+    }
+    /**
+     * Register container bindings for the application.
+     *
+     * @return void
+     */
+    protected function registerEventBindings()
+    {
+        $this->app->singleton('events', function ($app) {
+            $app->register(EventServiceProvider::class);
+
+            return $app->make('events');
+        });
+    }
+
+
 
     /**
      * Register the view environment.
